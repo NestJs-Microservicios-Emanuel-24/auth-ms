@@ -1,0 +1,5 @@
+export enum AuthActions {
+  REGISTER = 'AUTH.REGISTER.USER',
+  LOGIN = 'AUTH.LOGIN.USER',
+  VERIFY = 'AUTH.VERIFY.USER',
+}
