@@ -17,11 +17,11 @@ export class AuthController {
 
   @MessagePattern(AuthActions.LOGIN)
   loginUser(@Payload() loginUserDto: LoginUserDto) {
-    return `data: ${JSON.stringify(loginUserDto)}`;
+    return this.authService.loginUser(loginUserDto);
   }
 
   @MessagePattern(AuthActions.VERIFY)
-  verifyToken(@Payload() payload: any) {
-    return `data: ${JSON.stringify(payload)}`;
+  verifyToken(@Payload() token: string) {
+    return this.authService.verifyToken(token)
   }
 }
